@@ -40,7 +40,7 @@ def handle_data(handle):
                 value = 'Yes' if detail.find('a').text == 'View Details' else 'No'
             user_details[label] = value
         
-        user_details['currentRating'] = int(soup.select_one('.rating-number').text)
+        user_details['currentRating'] = int(soup.select_one('.rating-number').text.replace(',', '').replace('?', ''))
         
         # Remove Pro Plan from user details
         if 'CodeChef Pro Plan:' in user_details:
