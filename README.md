@@ -1,6 +1,6 @@
 # CodeChef Profile Viewer 🧑‍💻
 
-Welcome to the **CodeChef Profile Viewer**! This Flask-based web application allows users to fetch and view details of CodeChef profiles, including current ratings and other user information.
+Welcome to the **CodeChef Profile Viewer**! This Flask-based web application lets users fetch and view CodeChef profiles, including ratings and other details.
 
 ## Table of Contents
 
@@ -9,17 +9,16 @@ Welcome to the **CodeChef Profile Viewer**! This Flask-based web application all
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Hosting](#hosting)
 
 ## Features ✨
 
 - Enter a CodeChef handle to fetch user details and ratings.
-- View the user's current rating, username, country, and whether they have a CodeChef Pro Plan.
-- Responsive design with Bootstrap for a seamless user experience.
+- View the user's rating, username, country, and CodeChef Pro Plan status.
+- Responsive design with Bootstrap.
 - Redirects to a detailed profile view upon form submission.
 
 ## Installation 🛠️
-
-To set up this project on your local machine, follow these steps:
 
 1. **Clone the repository:**
 
@@ -71,21 +70,22 @@ To set up this project on your local machine, follow these steps:
 
 1. Open your browser and go to `http://127.0.0.1:8800`.
 2. Enter a valid CodeChef handle in the input field.
-3. Click the "Get Profile" button to view user details.
-4. You will be redirected to a page showing the user's current rating and other profile details.
+3. Click "Get Profile" to view user details.
+4. You'll be redirected to a page showing the user's rating and profile details.
 
 ## Credits 🙏
 
-This project is highly inspired by the work of [Deepak Suthar](https://github.com/deepaksuthar40128/Codechef-API). Special thanks to Deepak for providing a foundational reference for this project!
+Inspired by [Deepak Suthar](https://github.com/deepaksuthar40128/Codechef-API). Thanks for the foundational reference!
 
 ## License 📜
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Hosting 🌐
 
-The application will be hosted on Vercel. You can access it [here](https://your-vercel-deployment-url).
+The application is hosted on [Vercel](https://code-chef-rating-api.vercel.app/).
 
 ---
 
-Feel free to contribute to this project by submitting issues or pull requests. Happy coding! 😊
+Feel free to contribute by submitting issues or pull requests. Happy coding! 😊
+
