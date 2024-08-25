@@ -39,8 +39,13 @@ def handle_data(handle):
             elif label == 'CodeChef Pro Plan:' and detail.find('a'):
                 value = 'Yes' if detail.find('a').text == 'View Details' else 'No'
             user_details[label] = value
-        
-        user_details['currentRating'] = int(soup.select_one('.rating-number').text.replace(',', '').replace('?', ''))
+
+        rating_text = soup.select_one('.rating-number').text
+        # start from begining of the string, and ignore everything after ?
+        if '?' in rating_text:
+            rating_text = rating_text[:rating_text.index('?')]
+
+        user_details['currentRating'] = int(rating_text)
         
         # Remove Pro Plan from user details
         if 'CodeChef Pro Plan:' in user_details:
