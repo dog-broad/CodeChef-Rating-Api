@@ -54,6 +54,14 @@ def handle_data(handle):
         return jsonify({'success': True, **user_details})
 
     except Exception as e:
+        # If any of Country, Institution, Student/Profession is in user_detail's keys, it means the account exists but is private
+        if any(key in user_details.keys() for key in ['Country:', 'Institution:', 'Student/Profession:']):
+            return jsonify({'response': response.status_code, 
+                            'success': True, 
+                            'error': 'User found but ratings not available', 
+                            'suggest': 'Most probably no ratings are available for this user. Try with a different username.', 
+                            'handle': handle})
+
         return jsonify({'response': response.status_code, 
                         'success': False, 
                         'error': f'Error fetching user data from CodeChef: {str(e)}',
