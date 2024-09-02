@@ -3,6 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
+user_details = {}
+
 app = Flask(__name__)
 
 @app.route('/')
